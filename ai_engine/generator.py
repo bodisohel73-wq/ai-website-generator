@@ -1,0 +1,151 @@
+def generate_website(description: str) -> str:
+
+    if "car" in description.lower():
+        color = "red"
+    elif "gym" in description.lower():
+        color = "cyan"
+    else:
+        color = "purple"
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Generated Website</title>
+
+<style>
+* {{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}}
+
+body {{
+    font-family: 'Arial', sans-serif;
+    background: #0a0a0a;
+    color: white;
+}}
+
+.navbar {{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #111;
+    border-bottom: 1px solid #222;
+}}
+
+.logo {{
+    color: {color};
+    font-size: 20px;
+    font-weight: bold;
+}}
+
+.menu {{
+    display: flex;
+    gap: 20px;
+}}
+
+.menu a {{
+    color: #aaa;
+    text-decoration: none;
+}}
+
+.hero {{
+    text-align: center;
+    padding: 120px 20px;
+}}
+
+.hero h1 {{
+    font-size: 45px;
+    color: {color};
+}}
+
+.hero p {{
+    margin-top: 15px;
+    color: #bbb;
+}}
+
+.btn {{
+    margin-top: 25px;
+    padding: 12px 30px;
+    background: {color};
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 10px {color}, 0 0 20px {color};
+    transition: 0.3s;
+}}
+
+.btn:hover {{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px {color}, 0 0 40px {color};
+}}
+
+.section {{
+    padding: 60px 20px;
+    text-align: center;
+}}
+
+.cards {{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}}
+
+.card {{
+    background: #111;
+    padding: 25px;
+    width: 220px;
+    border-radius: 10px;
+    border: 1px solid #222;
+}}
+
+.footer {{
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    margin-top: 40px;
+    color: #777;
+}}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="logo">⚡ AI Builder</div>
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+</div>
+
+<div class="hero">
+    <h1>{description}</h1>
+<p>Custom AI design based on your idea</p>
+    <p>Generated instantly using AI 🚀</p>
+    <button class="btn">Start Now</button>
+</div>
+
+<div class="section">
+    <h2>Our Features</h2>
+
+    <div class="cards">
+        <div class="card">⚡ Fast</div>
+        <div class="card">🎨 Modern UI</div>
+        <div class="card">🤖 AI Powered</div>
+    </div>
+</div>
+
+<div class="footer">
+    © 2026 AI Website Generator
+</div>
+
+</body>
+</html>
+"""

@@ -1,3 +1,4 @@
+from app.backend.routes.generate import router as generate_router
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -21,6 +22,7 @@ app = FastAPI(
 
 app.include_router(auth_router)
 app.include_router(project_router)
+app.include_router(generate_router)
 # Enable CORS for all origins (as required)
 app.add_middleware(
     CORSMiddleware,
