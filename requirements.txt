@@ -4,3 +4,4 @@ h11==0.16.0
 passlib==1.7.4
 uvicorn==0.44.0
 fastapi
+python-jose[cryptography]
