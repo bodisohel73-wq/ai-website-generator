@@ -1,7 +1,4 @@
-bcrypt==5.0.0
-click==8.3.2
-h11==0.16.0
-passlib==1.7.4
-uvicorn==0.44.0
 fastapi
+uvicorn
+passlib[bcrypt]
 python-jose[cryptography]
